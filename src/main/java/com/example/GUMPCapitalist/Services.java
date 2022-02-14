@@ -27,14 +27,14 @@ public class Services {
     }
 
     void saveWorldToXml(World world){
-        //OutputStream output = new FileOutputStream(file);
         try{
             JAXBContext cont = JAXBContext.newInstance(World.class);
             Marshaller m = cont.createMarshaller();
-            m.marshal(world, new File("world.xml"));
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
+            OutputStream output = new FileOutputStream("world.xml");
+            m.marshal(world, output);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     World getWorld(){
