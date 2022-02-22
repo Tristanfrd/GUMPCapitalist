@@ -1,6 +1,7 @@
 package com.example.GUMPCapitalist;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
@@ -12,16 +13,18 @@ import static javax.xml.bind.JAXBContext.newInstance;
 
 public class Services {
 
-    World readWorldFromXml() {
+    World readWorldFromXml(String username) throws JAXBException {
         World world = new World();
         try {
             JAXBContext cont = JAXBContext.newInstance(World.class);
             Unmarshaller u = cont.createUnmarshaller();
-            InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
-            world = (World) u.unmarshal(input);
-
+            InputStream inputWorldUser = getClass().getClassLoader().getResourceAsStream(username+"-world.xml");
+            world = (World) u.unmarshal(inputWorldUser);
         } catch (Exception e) {
-            e.printStackTrace();
+            JAXBContext cont = JAXBContext.newInstance(World.class);
+            Unmarshaller u = cont.createUnmarshaller();
+            InputStream inputWorldInitial = getClass().getClassLoader().getResourceAsStream("world.xml");
+            world = (World) u.unmarshal(inputWorldInitial);
         }
         return world;
     }
@@ -37,8 +40,8 @@ public class Services {
         }
     }
 
-    World getWorld(){
-        World world = readWorldFromXml();
+    World getWorld(String username) throws JAXBException {
+        World world = readWorldFromXml(username);
         return world;
     }
 }
