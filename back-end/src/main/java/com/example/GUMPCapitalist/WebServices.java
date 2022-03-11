@@ -55,10 +55,21 @@ import javax.xml.bind.JAXBException;
             }
         }
 
-    @DeleteMapping(value="/world")
+    @DeleteMapping(value="/world",produces = "application/json")
     ResponseEntity<World> deleteWorld(@RequestBody String username) throws JAXBException {
             World world = services.deleteWorld(username);
             return ResponseEntity.ok(world);
         }
+
+    @PutMapping(value = "/angelupgrade", produces = "application/json")
+    public PallierType angelUpgrade (@RequestHeader(value = "X-User", required = false) String username,@RequestBody PallierType angelUpgrade) throws JAXBException{
+        Boolean majFaite = services.updateAngelUpgrades(username,angelUpgrade);
+        if (majFaite){
+            return angelUpgrade;
+        }
+        else{
+            return null;
+        }
+    }
 
     }

@@ -144,7 +144,7 @@ public class Services {
             world.setMoney(world.getMoney() - ((product.getCout()*(1- Math.pow(product.getCroissance(), qtchange)))/1-product.getCroissance()));
             product.setQuantite(product.getQuantite()+qtchange);
         } else if (product.getQuantite()==1){
-            world.setMoney(world.getMoney()+ product.getRevenu()* product.getQuantite());
+            world.setMoney(world.getMoney()+ product.getRevenu()* product.getQuantite()*(1+ world.getAngelbonus()/100* world.getActiveangels()));
             product.setTimeleft(product.getVitesse());
         // initialiser product.timeleft à product.vitesse // pour lancer la production
         }
@@ -218,4 +218,17 @@ public class Services {
         }
         return worldReset;
     }
+
+    public Boolean updateAngelUpgrades(String username, PallierType newAngelUpgrade) throws JAXBException {
+        World world = getWorld(username);
+        if (world.getActiveangels()>= newAngelUpgrade.getSeuil() && !(newAngelUpgrade.isUnlocked())){
+            world.setActiveangels(world.getActiveangels()-newAngelUpgrade.getSeuil());
+            world.setAngelbonus(world.getAngelbonus()+ Double.valueOf(newAngelUpgrade.getRatio()).intValue());
+            newAngelUpgrade.setUnlocked(true);
+        }
+        world.setLastupdate(System.currentTimeMillis());
+        saveWorldToXml(world,username);
+        return true;
+    }
+
 }
