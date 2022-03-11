@@ -98,7 +98,6 @@ public class Services {
         // trouver dans ce monde, le produit équivalent à celui passé en paramètre
         ProductType product = findProductById(world, newproduct.getId());
         PalliersType seuils = product.getPalliers();
-        System.out.println(world.money);
         if (product == null) {
             return false;
         }
@@ -142,9 +141,11 @@ public class Services {
                     }
                 }
             }
-
-            world.setMoney(world.getMoney() - ((product.getCout()*(1- Math.pow(product.getCroissance()/100, qtchange)))/(1-product.getCroissance()/100)));
+            world.setMoney(world.getMoney() - qtchange*((product.getCout()*((1- Math.pow(product.getCroissance(), qtchange))))/(1-product.getCroissance())));
             System.out.println(world.money);
+            System.out.println(product.getCroissance());
+            System.out.println(qtchange*((product.getCout()*((1- Math.pow(product.getCroissance(), qtchange))))/(1-product.getCroissance())));
+
             product.setQuantite(product.getQuantite()+qtchange);
         } else if (product.getQuantite()==1){
             world.setMoney(world.getMoney()+ product.getRevenu()* product.getQuantite()*(1+ world.getAngelbonus()/100* world.getActiveangels()));
