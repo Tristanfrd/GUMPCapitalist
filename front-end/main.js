@@ -4,13 +4,13 @@ let splash_time = setTimeout(() => {
   splash_screen.style.display = "none";
 }, 1000);
 
-var serveurUrl = "https://isiscapitalist.kk.kurasawa.fr/"; 
+var serveurUrl = "http://localhost:8080/gumpcapitalist/generic";
 var currentWorld; 
 
 // setInterval(function() {calcScore();}, 100);
 
 $(document).ready(function () {        
-  $.getJSON(serveurUrl + "adventureisis/generic/world", function (world) {         
+  $.getJSON(serveurUrl + "/world", function (world) {
     currentWorld = world;         
 
     document.getElementById("name").innerHTML = world.name;
