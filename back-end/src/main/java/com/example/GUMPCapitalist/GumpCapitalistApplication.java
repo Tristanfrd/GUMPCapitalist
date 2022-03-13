@@ -14,7 +14,7 @@ public class GumpCapitalistApplication {
 		World world = new World();
 		Services service = new Services();
 		world = service.readWorldFromXml("Jules");
-		System.out.println(world);
+		service.saveWorldToXml(world,"Jules");
 	}
 
 }

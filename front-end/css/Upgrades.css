@@ -1,0 +1,55 @@
+#intro_upgrades {
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  letter-spacing: -1px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #2C426D;
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+#upgrades_modal {
+  display: inline-flex;
+  position: relative;
+  top: -20px;
+}
+
+.upgrade_angel,
+.upgrade_cash,
+.upgrade_gold{
+  width: 144px;
+  margin: 25px;
+  z-index: 10;
+}
+
+.upgrade_angel img,
+.upgrade_cash img,
+.upgrade_gold img {
+  width: 120px;
+  margin-left: 12px;
+}
+
+.titre_upgrade {
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  letter-spacing: -1px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2C426D;
+}
+
+.action_upgrade {
+  text-align: center;
+  position: relative;
+  top: -15px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cost_upgrade {
+  position: relative;
+  top: -5px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
