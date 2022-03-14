@@ -16,6 +16,7 @@
 .manager img {
   width: 140px;
   margin-left: 10px;
+  filter: brightness(50%);
 }
 
 .manager {

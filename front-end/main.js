@@ -4,13 +4,13 @@ let splash_time = setTimeout(() => {
   splash_screen.style.display = "none";
 }, 1000);
 
-var serveurUrl = "http://localhost:8080/gumpcapitalist/generic";
+var serveurUrl = "https://isiscapitalist.kk.kurasawa.fr/"; 
 var currentWorld; 
 
 // setInterval(function() {calcScore();}, 100);
 
 $(document).ready(function () {        
-  $.getJSON(serveurUrl + "/world", function (world) {
+  $.getJSON(serveurUrl + "adventureisis/generic/world", function (world) {         
     currentWorld = world;         
 
     document.getElementById("name").innerHTML = world.name;
@@ -72,12 +72,12 @@ $(document).ready(function () {
     document.getElementById("qte_schrimp").innerHTML = world.products.product[3].quantite;
     document.getElementById("qte_chocolate").innerHTML = world.products.product[4].quantite;
     document.getElementById("qte_van").innerHTML = world.products.product[5].quantite;
-    document.getElementById("nike_suppl").innerHTML = world.products.product[0].cout + " $";
-    document.getElementById("pingpong_suppl").innerHTML = world.products.product[1].cout + " $";
-    document.getElementById("football_suppl").innerHTML = world.products.product[2].cout + " $";
-    document.getElementById("schrimp_suppl").innerHTML = world.products.product[3].cout + " $";
-    document.getElementById("chocolate_suppl").innerHTML = world.products.product[4].cout + " $";
-    document.getElementById("van_suppl").innerHTML = world.products.product[5].cout + " $";
+    document.getElementById("nike_suppl").innerHTML = Math.round(world.products.product[0].cout)  + " $";
+    document.getElementById("pingpong_suppl").innerHTML = Math.round(world.products.product[1].cout)  + " $";
+    document.getElementById("football_suppl").innerHTML = Math.round(world.products.product[2].cout)  + " $";
+    document.getElementById("schrimp_suppl").innerHTML = Math.round(world.products.product[3].cout)  + " $";
+    document.getElementById("chocolate_suppl").innerHTML = Math.round(world.products.product[4].cout)  + " $";
+    document.getElementById("van_suppl").innerHTML = Math.round(world.products.product[5].cout)  + " $";
 
     document.getElementById("manager_name_nike").innerHTML = world.managers.pallier[0].name;
     document.getElementById("manager_seuil_nike").innerHTML = world.managers.pallier[0].seuil + " $";
@@ -155,14 +155,6 @@ feather.onclick = function() {
     document.getElementById("buy_schrimp_button").innerHTML = "Buy</br>x10";
     document.getElementById("buy_chocolate_button").innerHTML = "Buy</br>x10";
     document.getElementById("buy_van_button").innerHTML = "Buy</br>x10";
-  } else if (document.getElementById("vitesse").innerHTML == "x10") {
-    document.getElementById("vitesse").innerHTML = "max";
-    document.getElementById("buy_nike_button").innerHTML = "Buy</br>";
-    document.getElementById("buy_pingpong_button").innerHTML = "Buy</br>";
-    document.getElementById("buy_football_button").innerHTML = "Buy</br>";
-    document.getElementById("buy_schrimp_button").innerHTML = "Buy</br>";
-    document.getElementById("buy_chocolate_button").innerHTML = "Buy</br>";
-    document.getElementById("buy_van_button").innerHTML = "Buy</br>";
   } else {
     document.getElementById("vitesse").innerHTML = "x1";
     document.getElementById("buy_nike_button").innerHTML = "Buy</br>x1";
@@ -200,30 +192,42 @@ $(".object_icon").click(function (event) {
 
   var id_logo = $(this)[0].id;
   if(id_logo == "icon_nike") {
+    var tps_0 = currentWorld.products.product[0].vitesse;
     var id = 0;
-    document.getElementById("nike_time").innerHTML = currentWorld.products.product[0].vitesse;
+    document.getElementById("nike_time").innerHTML = tps_0/1000 + " sec";
     bar_1.set(1);
-    bar_1.animate(0, {duration: 1000});
+    bar_1.animate(0, {duration: tps_0});
+
   } else if(id_logo == "icon_pingpong") {
+    var tps_1 = currentWorld.products.product[1].vitesse;
     var id = 1;
+    document.getElementById("pingpong_time").innerHTML = tps_1/1000 + " sec";
     bar_2.set(1);
-    bar_2.animate(0, {duration: 1000});
+    bar_2.animate(0, {duration: tps_1});
   } else if(id_logo == "icon_football") {
+    var tps_2 = currentWorld.products.product[2].vitesse;
     var id = 2;
+    document.getElementById("football_time").innerHTML = tps_2/1000 + " sec";
     bar_3.set(1);
-    bar_3.animate(0, {duration: 1000});
+    bar_3.animate(0, {duration: tps_2});
   } else if(id_logo == "icon_schrimp") {
+    var tps_3 = currentWorld.products.product[3].vitesse;
     var id = 3;
+  document.getElementById("schrimp_time").innerHTML = tps_3/1000 + " sec";
     bar_4.set(1);
-    bar_4.animate(0, {duration: 1000});
+    bar_4.animate(0, {duration: tps_3});
   } else if(id_logo == "icon_chocolate") {
+    var tps_4 = currentWorld.products.product[4].vitesse;
     var id = 4;
+    document.getElementById("chocolate_time").innerHTML = tps_4/1000 + " sec";
     bar_5.set(1);
-    bar_5.animate(0, {duration: 1000});
+    bar_5.animate(0, {duration: tps_4});
   } else if(id_logo == "icon_van") {
+    var tps_5 = currentWorld.products.product[5].vitesse;
     var id = 5;
+    document.getElementById("van_time").innerHTML = tps_5/1000 + " sec";
     bar_6.set(1);
-    bar_6.animate(0, {duration: 1000});
+    bar_6.animate(0, {duration: tps_5});
   }
   var product = currentWorld.products.product[id];
 });
