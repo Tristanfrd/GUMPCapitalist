@@ -68,7 +68,6 @@ public class Services {
                 }
             }
         }
-        world.setMoney(world.getMoney()+newScore);
         world.setLastupdate(System.currentTimeMillis());
     }
 
