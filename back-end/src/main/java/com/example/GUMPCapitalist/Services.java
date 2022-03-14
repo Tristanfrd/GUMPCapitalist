@@ -53,7 +53,7 @@ public class Services {
                 long quotient = tempsEcoule/p.getVitesse(); // divisé par zéro et c'est faux! attention!
                 long reste = tempsEcoule%p.getVitesse();
                 if (quotient >0){
-                    newScore += (p.getRevenu() *(p.getQuantite() +quotient)*(1+ (world.getAngelbonus()/100* world.getActiveangels())));
+                    newScore += Math.round(p.getRevenu() *(p.getQuantite() +quotient)*(1+ (world.getAngelbonus()/100* world.getActiveangels())));
                     world.setScore(newScore);
                     p.setTimeleft(reste);
                 }else{
@@ -61,7 +61,7 @@ public class Services {
                 }
             }else{
                 if(p.getTimeleft() != 0 && p.getTimeleft()<tempsEcoule){
-                    newScore += (p.getRevenu() *p.getQuantite()*(1+ (world.getAngelbonus()/100* world.getActiveangels())));
+                    newScore += Math.round(p.getRevenu() *p.getQuantite()*(1+ (world.getAngelbonus()/100* world.getActiveangels())));
                     world.setScore(newScore);
                 }else{
                     p.setTimeleft(p.getTimeleft()-tempsEcoule);
