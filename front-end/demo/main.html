@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF8" />
+    <title>GUMPCapitalist</title>
+    <meta name="author" content="Jules Claudel & Tristan Frédérick" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/Products.css" rel="stylesheet" />
+    <link href="css/Unlocks.css" rel="stylesheet" />
+    <link href="css/Upgrades.css" rel="stylesheet" />
+    <link href="css/Managers.css" rel="stylesheet" />
+    <link href="css/Investors.css" rel="stylesheet" />
+    <link rel="icon" type="image/jpg" href="images/favicon.jpg" />
+  </head>
+  <body>
+    <div id="navbar">
+      <a class="navlink" id="nav_unlocks">Achèvements</a>
+      <a class="navlink" id="nav_upgrades">Améliorations</a>
+      <a class="navlink" id="nav_investors">Investisseurs</a>
+      <a class="navlink" id="nav_managers">Managers</a>
+    </div>
+    <img src="images/splash_screen.png" id="splash_screen" />
+    <img src="images/backgroundwithoutgumpwithfeather.png" id="background" />
+    <img src="images/forest_bench.png" id="forest" />
+
+    <div id="change_vitesse">
+      <img id="feather" title="Clickez sur la plume pour accélérer la vitesse du jeu !" src="images/feather.png">
+      <span id="vitesse">x1</span>
+    </div>
+    
+    <img id="display_infos" src="images/shit_happens.png">
+    
+    <div id="infos_user">
+      <img id="logo_joueur">
+      <div>
+      <span id="name"></span>
+      </div><div>
+      <span id="score"></span>
+      </div>
+    </div>
+
+    <div id="infos_user_background"></div>
+    
+    <div id="check_money">
+      <img src="images/forrest_suitcase.png">
+      <span id="money"></span>
+    </div>
+
+    <div class="upgrades" id="left_upgrade">
+      <div class="object">
+        <img class="object_icon" id="icon_nike" src="">
+        <p class="qtes" id="qte_nike">720</p>
+        <div class="left_up">
+          <div id="bar_nike"></div>
+          <p id="possessed_nike"></p>
+          <button class="buyproduct_left" id="buy_nike_button">Buy</br>x1</button>
+          <p class="buy_supl_left" id="nike_suppl">3 $</p>
+          <p class="time_left_left" id="nike_time">Temps</p>
+        </div>
+      </div>
+      <div class="object">
+        <img class="object_icon" id="icon_pingpong" src="">
+        <p class="qtes" id="qte_pingpong">62</p>
+        <div class="left_up">
+          <div id="bar_pingpong"></div>
+          <p id="possessed_pingpong"></p>
+          <button class="buyproduct_left" id="buy_pingpong_button">Buy</br>x1</button>
+          <p class="buy_supl_left" id="pingpong_suppl">14 $</p>
+          <p class="time_left_left" id="pingpong_time">Temps</p>
+        </div>
+      </div>
+      <div class="object">
+        <img class="object_icon" id="icon_football" src="">
+        <p class="qtes" id="qte_football">46</p>
+        <div class="left_up">
+          <div id="bar_football"></div>
+          <p id="possessed_football"></p>
+          <button class="buyproduct_left" id="buy_football_button">Buy</br>x1</button>
+          <p class="buy_supl_left" id="football_suppl">68 $</p>
+          <p class="time_left_left" id="football_time">Temps</p>
+        </div>
+      </div>
+    </div>
+    <div class="upgrades" id="right_upgrade">
+      <div class="object">
+        <img class="object_icon" id="icon_schrimp" src="">
+        <p class="qtes" id="qte_schrimp">10</p>
+        <div class="right_up">
+          <div id="bar_schrimp"></div>
+          <p id="possessed_schrimp"></p>
+          <button class="buyproduct_right" id="buy_schrimp_button">Buy</br>x1</button>
+          <p class="buy_supl_right" id="schrimp_suppl">1002 $</p>
+          <p class="time_left_right" id="schrimp_time">Temps</p>
+        </div>
+      </div>
+      <div class="object">
+        <img class="object_icon" id="icon_chocolate" src="">
+        <p class="qtes" id="qte_chocolate">6</p>
+        <div class="right_up">
+          <div id="bar_chocolate"></div>
+          <p id="possessed_chocolate"></p>
+          <button class="buyproduct_right" id="buy_chocolate_button">Buy</br>x1</button>
+          <p class="buy_supl_right" id="chocolate_suppl">4506 $</p>
+          <p class="time_left_right" id="chocolate_time">Temps</p>
+        </div>
+      </div>
+      <div class="object">
+        <img class="object_icon" id="icon_van" src="">
+        <p class="qtes" id="qte_van">2</p>
+        <div class="right_up">
+          <div id="bar_van"></div>
+          <p id="possessed_van"></p>
+          <button class="buyproduct_right" id="buy_van_button">Buy</br>x1</button>
+          <p class="buy_supl_right" id="van_suppl">12345 $</p>
+          <p class="time_left_right" id="van_time">Temps</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="unlocksPage" class="modal">
+      <div class="modal-content">
+        <p id="intro_unlocks">Vous voulez maximiser vos profits ? Ne cherchez pas plus loin ! Débloquez ces achèvements à l'aide de vos investissements dans le mode Carrière. Chaque achèvement vous donnera un avantage incroyable dans le développement de votre fortune. Pour débloquer un achèvement, cliquer sur son logo.</p> 
+        <div  id="unlockable_modal">
+          <div class="unlockable" id="first_unlock">
+            <img id="icon_first_unlock" src="images/unlock_van.png" />
+            <p class="unlockable_name" id="first_unlock_name"></p>
+            <p class="unlockable_quota" id="first_unlock_quota"></p>
+            <p class="unlockable_typebonus" id="first_unlock_typebonus"></p>
+            <p class="unlockable_bonus" id="first_unlock_bonus"></p>
+          </div>
+          <div class="unlockable" id="second_unlock">
+            <img id="icon_second_unlock" src="images/unlock_football.png" />
+            <p class="unlockable_name" id="second_unlock_name"></p>
+            <p class="unlockable_quota" id="second_unlock_quota"></p>
+            <p class="unlockable_typebonus" id="second_unlock_typebonus"></p>
+            <p class="unlockable_bonus" id="second_unlock_bonus"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="upgradesPage" class="modal">
+      <div class="modal-content">
+        <p id="intro_upgrades">Il n'y a pas de progrès sans sacrifice ! Chacune de ces améliorations vous coûtera des actions Apple ou de l'argent mais vous rapportera gros ! Pour améliorer ses profits, ou ses dividendes ; il faut savoir prendre des risques... Pour débloquer une amélioration, cliquer sur son logo.</p>
+        <div id="upgrades_modal">
+          <div class="upgrade_angel">
+            <img src="images/upgrade_macintosh.png" id="logo_upgrade_one" />
+            <p class="titre_upgrade" id="titre_upgrade_one"></p>
+            <p class="action_upgrade" id="action_upgrade_one"></p>
+            <p class="cost_upgrade" id="cost_upgrade_one"></p>
+          </div>
+          <div class="upgrade_angel">
+            <img src="images/upgrade_imac.png" id="logo_upgrade_two" />
+            <p class="titre_upgrade" id="titre_upgrade_two"></p>
+            <p class="action_upgrade" id="action_upgrade_two"></p>
+            <p class="cost_upgrade" id="cost_upgrade_two"></p>
+          </div>
+          <div class="upgrade_angel">
+            <img src="images/upgrade_ipod.png" id="logo_upgrade_three" />
+            <p class="titre_upgrade" id="titre_upgrade_three"></p>
+            <p class="action_upgrade" id="action_upgrade_three"></p>
+            <p class="cost_upgrade" id="cost_upgrade_three"></p>
+          </div>
+          <div class="upgrade_angel">
+            <img src="images/upgrade_macbook.png" id="logo_upgrade_four" />
+            <p class="titre_upgrade" id="titre_upgrade_four"></p>
+            <p class="action_upgrade" id="action_upgrade_four"></p>
+            <p class="cost_upgrade" id="cost_upgrade_four"></p>
+          </div>
+          <div class="upgrade_angel">
+            <img src="images/upgrade_iphone.png" id="logo_upgrade_five" />
+            <p class="titre_upgrade" id="titre_upgrade_five"></p>
+            <p class="action_upgrade" id="action_upgrade_five"></p>
+            <p class="cost_upgrade" id="cost_upgrade_five"></p>
+          </div>
+          <div class="upgrade_angel">
+            <img src="images/upgrade_ipad.png" id="logo_upgrade_six" />
+            <p class="titre_upgrade" id="titre_upgrade_six"></p>
+            <p class="action_upgrade" id="action_upgrade_six"></p>
+            <p class="cost_upgrade" id="cost_upgrade_six"></p>
+          </div>
+          <div class="upgrade_angel">
+            <img src="images/upgrade_airpods.png" id="logo_upgrade_seven" />
+            <p class="titre_upgrade" id="titre_upgrade_seven"></p>
+            <p class="action_upgrade" id="action_upgrade_seven"></p>
+            <p class="cost_upgrade" id="cost_upgrade_seven"></p>
+          </div>
+        </div> 
+        
+      </div>
+    </div>
+
+    <div id="investorsPage" class="modal">
+      <div class="modal-content">
+        <p id="intro_invest">Forrest a décidé d’investir dans cette « sorte d'entreprise de fruits » : Apple. Plus vous gagnez d’argent, plus l’investissement est attractif ! Il permet d’augmenter vos bénéfices et de débloquer de nouvelles améliorations mais il va falloir tout vendre et recommencer à zéro. Si vous souhaitez récolter vos dividendes, il vous suffit de cliquer sur la lettre.</p>
+        <div class="invest_img">
+          <div class="invest_side">
+            <div class="invest_card">
+              <p class="invest_title">Nombre d'actions actives</p>
+              <p class="invest_value" id="activeangels"></p>
+            </div>
+            <div class="invest_card">
+              <p class="invest_title">Total d'actions cumulées</p>
+              <p class="invest_value" id="totalangels"></p>
+            </div>
+          </div>
+          <div class="invest_side" id="bonus">
+            <div class="invest_card">
+              <p class="invest_title">Bonus par action</p>
+              <p class="invest_value" id="angelbonus"></p>
+            </div>
+          </div>
+        </div>
+        <div class="invest_img">
+          <img src="images/apple_letter.jpg" />
+        </div>
+      </div>
+    </div>
+
+    <div id="managersPage" class="modal">
+      <div class="modal-content" id="manager_modal">
+        <div class="manager">
+          <img id="manager_logo_nike" /> 
+          <p class="manager_name" id="manager_name_nike"></p>
+          <p class="manager_role" id="manager_role_nike">"I'm Forrest, Forrest Gump !"</br>------------------------</br>"Fait la course à votre place"</p>
+          <p class="manager_seuil" id="manager_seuil_nike"></p>
+        </div>
+        <div class="manager">
+          <img id="manager_logo_pingpong" /> 
+          <p class="manager_name" id="manager_name_pingpong"></p>
+          <p class="manager_role" id="manager_role_pingpong">"G**damn bless America"</br>------------------------</br>"Joue au ping-pong à votre place"</p>
+          <p class="manager_seuil" id="manager_seuil_pingpong"></p>
+        </div>
+        <div class="manager">
+          <img id="manager_logo_football" /> 
+          <p class="manager_name" id="manager_name_football"></p>
+          <p class="manager_role" id="manager_role_football">"How does it feel to be american ?"</br>------------------------</br>"Joue au football à votre place"</p>
+          <p class="manager_seuil" id="manager_seuil_football"></p>
+        </div>
+        <div class="manager">
+          <img id="manager_logo_schrimp" /> 
+          <p class="manager_name" id="manager_name_schrimp"></p>
+          <p class="manager_role" id="manager_role_schrimp">"You can barbecue it, boil it, broil it..."</br>------------------------</br>"Pêche les crevettes à votre place"</p>
+          <p class="manager_seuil" id="manager_seuil_schrimp"></p>
+        </div>
+        <div class="manager">
+          <img id="manager_logo_chocolate" /> 
+          <p class="manager_name" id="manager_name_chocolate"></p>
+          <p class="manager_role" id="manager_role_chocolate">"Life is like a box of chocolate"</br>------------------------</br>"Mange les chocolats à votre place"</p>
+          <p class="manager_seuil" id="manager_seuil_chocolate"></p>
+        </div>
+        <div class="manager">
+          <img id="manager_logo_van" /> 
+          <p class="manager_name" id="manager_name_van"></p>
+          <p class="manager_role" id="manager_role_van">"You can sit here if you want !"</br>------------------------</br>"Conduit le van à votre place"</p>
+          <p class="manager_seuil" id="manager_seuil_van">10,000,000.00 $</p>
+        </div>
+      </div>
+    </div>
+    
+    <p id="indication_modal">Cliquez sur la partie foncée pour retourner au Mode Carrière</p>
+    <img src="images/title_cap.png" id="title_cap" />
+    <h1 class="modal_title" id="managers_title">Managers</h1>
+    <h1 class="modal_title" id="unlocks_title">Achèvements</h1>
+    <h1 class="modal_title" id="upgrades_title">Améliorations</h1>
+    <h1 class="modal_title" id="investors_title">Investisseurs</h1>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.5.6/dist/progressbar.js"> </script>
+    <script src="main_demo.js"></script>
+  </body>
+</html>

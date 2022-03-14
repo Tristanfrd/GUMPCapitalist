@@ -1,0 +1,407 @@
+<world>
+  <name>Dorothy Harris</name>
+  <logo>Earth</logo>
+  <money>0</money>
+  <score>0</score>
+  <totalangels>0</totalangels>
+  <activeangels>0</activeangels>
+  <angelbonus>2</angelbonus>
+  <lastupdate>10</lastupdate>
+  <products>
+    <!--2 to 6 repetitions:-->
+    <product>
+      <id>1</id>
+      <name>Nike Cortez OG</name>
+      <logo>"images/icon_nike.png"</logo>
+      <cout>0.50</cout>
+      <croissance>1.10</croissance>
+      <revenu>0.12</revenu>
+      <vitesse>1000</vitesse>
+      <quantite>1</quantite>
+      <timeleft>100</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      <palliers>
+        <pallier>
+          <!-- upgrade par seuil de quantité de produits-->
+          <name>Acceleration 1</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Acceleration.jpg"</logo>
+          <seuil>25</seuil>
+          <idcible>1</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Gain 1</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Gain.jpg"</logo>
+          <seuil>100</seuil>
+          <idcible>1</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Gain 2</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Gain.jpg"</logo>
+          <seuil>200</seuil>
+          <idcible>1</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+      </palliers>
+    </product>
+    <product>
+      <id>2</id>
+      <name>Raquettes de ping-pong</name>
+      <logo>"images/icon_pingpong.png"</logo>
+      <cout>8</cout>
+      <croissance>1.13</croissance>
+      <revenu>0.60</revenu>
+      <vitesse>7000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>7000</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      <palliers>
+        <pallier>
+          <name>Acceleration 1</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Acceleration.jpg"</logo>
+          <seuil>25</seuil>
+          <idcible>3</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Gain 1</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Gain.jpg"</logo>
+          <seuil>100</seuil>
+          <idcible>3</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Acceleration 2</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Acceleration.jpg"</logo>
+          <seuil>200</seuil>
+          <idcible>3</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+      </palliers>
+    </product>
+    <product>
+      <id>3</id>
+      <name>Ballon Football US</name>
+      <logo>"images/icon_football.png"</logo>
+      <cout>25</cout>
+      <croissance>1.11</croissance>
+      <revenu>1.1</revenu>
+      <vitesse>18000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>18000</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      <palliers>
+        <pallier>
+          <name>Gain 1</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Gain.jpg"</logo>
+          <seuil>25</seuil>
+          <idcible>4</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Gain 2</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Gain.jpg"</logo>
+          <seuil>100</seuil>
+          <idcible>4</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Gain 3</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Gain.jpg"</logo>
+          <seuil>200</seuil>
+          <idcible>4</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+      </palliers>
+    </product>
+    <product>
+      <id>4</id>
+      <name>Crevettier</name>
+      <logo>"images/icon_schrimp.png"</logo>
+      <cout>3</cout>
+      <croissance>1.12</croissance>
+      <revenu>0.25</revenu>
+      <vitesse>3000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>3000</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      <palliers>
+        <pallier>
+          <name>Gain 1</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Gain.jpg"</logo>
+          <seuil>25</seuil>
+          <idcible>2</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Vitesse 1</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Acceleration.jpg"</logo>
+          <seuil>100</seuil>
+          <idcible>2</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Gain 2</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Gain.jpg"</logo>
+          <seuil>200</seuil>
+          <idcible>2</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+      </palliers>
+    </product>
+    <product>
+      <id>5</id>
+      <name>Boîte de chocolats</name>
+      <logo>"images/icon_chocolate.png"</logo>
+      <cout>134</cout>
+      <croissance>1.10</croissance>
+      <revenu>3.42</revenu>
+      <vitesse>115000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>115000</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      <palliers>
+        <pallier>
+          <name>Acceleration 1</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Acceleration.jpg"</logo>
+          <seuil>25</seuil>
+          <idcible>5</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Gain 1</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Gain.jpg"</logo>
+          <seuil>100</seuil>
+          <idcible>5</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Acceleration 2</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Acceleration.jpg"</logo>
+          <seuil>200</seuil>
+          <idcible>5</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+      </palliers>
+    </product>
+    <product>
+      <id>6</id>
+      <name>Van hippie</name>
+      <logo>"images/icon_van.png"</logo>
+      <cout>1500</cout>
+      <croissance>1.08</croissance>
+      <revenu>10</revenu>
+      <vitesse>360000</vitesse>
+      <quantite>0</quantite>
+      <timeleft>360000</timeleft>
+      <managerUnlocked>false</managerUnlocked>
+      <palliers>
+        <pallier>
+          <name>Gain 1</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Gain.jpg"</logo>
+          <seuil>25</seuil>
+          <idcible>6</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Vitesse 1</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Acceleration.jpg"</logo>
+          <seuil>100</seuil>
+          <idcible>6</idcible>
+          <ratio>2</ratio>
+          <typeratio>vitesse</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+          <name>Gain 2</name>
+          <logo>"/Users/tristanfrederick/desktop/Cours/Architecture orientée service/GUMPCapitalist/src/main/webapp/icones/Gain.jpg"</logo>
+          <seuil>200</seuil>
+          <idcible>6</idcible>
+          <ratio>2</ratio>
+          <typeratio>gain</typeratio>
+          <unlocked>false</unlocked>
+        </pallier>
+      </palliers>
+    </product>
+  </products>
+  <allunlocks>
+    <!-- upgrade général pour une quantité exacte partout-->
+    <pallier>
+      <name>De quoi remplir un van</name>
+      <logo>"images/unlock_van.png"</logo>
+      <seuil>7</seuil>
+      <idcible>0</idcible>
+      <ratio>2</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>De quoi obtenir une équipe de football US complète</name>
+      <logo>"images/unlock_football.png"</logo>
+      <seuil>45</seuil>
+      <idcible>0</idcible>
+      <ratio>2</ratio>
+      <typeratio>acceleration</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+  </allunlocks>
+  <upgrades>
+    <!--cash upgrade-->
+    <pallier>
+      <name>Lancement du Macintosh</name>
+      <logo>"images/upgrade_macintosh.png"</logo>
+      <seuil>1000</seuil>
+      <idcible>0</idcible>
+      <ratio>2</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Lancement de l'iMac</name>
+      <logo>"images/upgrade_imac.png"</logo>
+      <seuil>5000</seuil>
+      <idcible>0</idcible>
+      <ratio>2</ratio>
+      <typeratio>acceleration</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Lancement de l'iPod</name>
+      <logo>"images/upgrade_ipod.png"</logo>
+      <seuil>10000</seuil>
+      <idcible>0</idcible>
+      <ratio>5</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+  </upgrades>
+  <angelupgrades>
+    <!--angel upgrade-->
+    <pallier>
+      <name>Lancement du Macbook</name>
+      <logo>"images/upgrade_macbook.png"</logo>
+      <seuil>3000</seuil>
+      <idcible>0</idcible>
+      <ratio>1</ratio>
+      <typeratio>ange</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Lancement de l'iPhone</name>
+      <logo>"images/upgrade_iphone.png"</logo>
+      <seuil>5000</seuil>
+      <idcible>0</idcible>
+      <ratio>1</ratio>
+      <typeratio>ange</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Lancement de l'iPad</name>
+      <logo>"images/upgrade_ipad.png"</logo>
+      <seuil>10000</seuil>
+      <idcible>0</idcible>
+      <ratio>2</ratio>
+      <typeratio>ange</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Lancement des Airpods</name>
+      <logo>"images/upgrade_airpods.png"</logo>
+      <seuil>20000</seuil>
+      <idcible>0</idcible>
+      <ratio>2</ratio>
+      <typeratio>ange</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+  </angelupgrades>
+  <managers>
+    <!--Zero or more repetitions:-->
+    <pallier>
+      <name>Forrest Gump</name>
+      <logo>"images/manager_nike.png"</logo>
+      <seuil>20</seuil>
+      <idcible>1</idcible>
+      <ratio>0</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Lieutenant Dan</name>
+      <logo>"images/manager_pingpong.png</logo>
+      <seuil>150</seuil>
+      <idcible>2</idcible>
+      <ratio>0</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Président JFK</name>
+      <logo>"images/manager_football.png"</logo>
+      <seuil>1000</seuil>
+      <idcible>3</idcible>
+      <ratio>0</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Bubba</name>
+      <logo>"images/manager_schrimp.png"</logo>
+      <seuil>10000</seuil>
+      <idcible>4</idcible>
+      <ratio>0</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Madame Gump</name>
+      <logo>"images/manager_chocolate.png"</logo>
+      <seuil>50000</seuil>
+      <idcible>5</idcible>
+      <ratio>0</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+    <pallier>
+      <name>Jenny</name>
+      <logo>"images/manager_van.png"</logo>
+      <seuil>100000</seuil>
+      <idcible>6</idcible>
+      <ratio>0</ratio>
+      <typeratio>gain</typeratio>
+      <unlocked>false</unlocked>
+    </pallier>
+  </managers>
+</world>
