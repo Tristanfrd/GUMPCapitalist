@@ -68,6 +68,7 @@ public class Services {
                 }
             }
         }
+        world.setMoney(world.getMoney()+newScore);
         world.setLastupdate(System.currentTimeMillis());
     }
 
@@ -84,7 +85,7 @@ public class Services {
     public PallierType findManagerByName(World world, String name){
         PalliersType managers = world.getManagers();
         for (PallierType man : managers.getPallier()){
-            if (man.getName()==name){
+            if (name.equals(man.getName())){
                 return man;
             }
         }
@@ -135,7 +136,6 @@ public class Services {
             // soustraire de l'argent du joueur le cout de la quantité
             // achetée et mettre à jour la quantité de product
             Double cout = calculerCroissance(product,qtchange);
-            System.out.println("Cout "+cout);
             product.setQuantite(newproduct.getQuantite());
             world.setMoney(world.getMoney()-cout);
             product.setCout(product.getCout() * Math.pow(product.getCroissance(), qtchange));
@@ -157,6 +157,7 @@ public class Services {
             // initialiser product.timeleft à product.vitesse // pour lancer la production
             product.setTimeleft(product.getVitesse());
             world.setMoney(world.getMoney()+ (product.getRevenu()* product.getQuantite()));
+            world.setScore(world.getScore()+ world.getMoney());
             System.out.println("Quantité "+product.getQuantite()+"    Revenu "+product.getRevenu()+"    monnaie "+world.getMoney());
         }
         // sauvegarder les changements du monde
@@ -169,26 +170,27 @@ public class Services {
     public Boolean updateManager(String username, PallierType newmanager) throws JAXBException {
         // aller chercher le monde qui correspond au joueur
         World world = getWorld(username);
-        // trouver dans ce monde, le manager équivalent à celui passé
-        // en paramètre
+        // trouver dans ce monde, le manager équivalent à celui passé
+        // en paramètre
         PallierType manager = findManagerByName(world, newmanager.getName());
         if (manager == null) {
+            System.out.println("manager non trouvé");
             return false;
         }
-        // débloquer ce manager
+        // débloquer ce manager
         manager.setUnlocked(true);
         // trouver le produit correspondant au manager
         ProductType product = findProductById(world, manager.getIdcible());
         if (product == null) {
             return false;
         }
-        // débloquer le manager de ce produit
+        // débloquer le manager de ce produit
         product.setManagerUnlocked(true);
         // soustraire de l'argent du joueur le cout du manager
-        // sauvegarder les changements au monde
         world.setMoney(world.getMoney() - manager.getSeuil());
+        // sauvegarder les changements au monde
         world.setLastupdate(System.currentTimeMillis());
-        saveWorldToXml(world,username);
+        saveWorldToXml(world, username);
         return true;
     }
 
